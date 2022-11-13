@@ -1,0 +1,119 @@
+.Button {
+  font-family: "Dosis", sans-serif;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  &.login-btn {
+    background: #3dc3f8;
+    border-radius: 8px;
+    padding: 12px 35px;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 150%;
+    color: white;
+    border: 1px transparent solid;
+    &:hover {
+      background: darken(#3dc3f8, 5%);
+      color: black;
+      border: 1px greenyellow solid;
+    }
+    &.invalid-btn {
+      cursor: not-allowed;
+    }
+    @media (max-width: 600px) {
+      width: calc(100% - 40px);
+      display: flex;
+      justify-content: center;
+      position: fixed;
+      z-index: 9;
+      bottom: 20px;
+      left: 20px;
+    }
+  }
+  &.signup-btn {
+    background: #f38a61;
+    margin-left: 16px;
+    &:hover {
+      background: darken(#f38a61, 5%);
+    }
+  }
+  &.update-btn {
+    background: #42bbfb;
+    border-radius: 8px;
+    padding: 6px 12px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 150%;
+    &:hover {
+      background: darken(#7b67ec, 2%);
+      color: black;
+    }
+    &.invalid-btn {
+      cursor: not-allowed;
+    }
+    @media (max-width: 600px) {
+      width: calc(100% - 40px);
+      display: flex;
+      justify-content: center;
+      position: fixed;
+      z-index: 9;
+      bottom: 20px;
+      left: 20px;
+    }
+  }
+  &.delete-btn {
+    background: #f19748;
+    border-radius: 8px;
+    padding: 6px 12px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 150%;
+    &:hover {
+      background: darken(#ec6767, 2%);
+      color: black;
+    }
+    &.invalid-btn {
+      cursor: not-allowed;
+    }
+    @media (max-width: 600px) {
+      width: calc(100% - 40px);
+      display: flex;
+      justify-content: center;
+      position: fixed;
+      z-index: 9;
+      bottom: 20px;
+      left: 20px;
+    }
+  }
+  &.create-btn {
+    background: #c9ee45;
+    border-radius: 8px;
+    padding: 6px 12px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 150%;
+    color: black;
+    text-transform: capitalize;
+    &:hover {
+      background: darken(#61ec78, 2%);
+      color: white;
+    }
+    &.invalid-btn {
+      cursor: not-allowed;
+    }
+    @media (max-width: 600px) {
+      width: calc(100% - 40px);
+      display: flex;
+      justify-content: center;
+      position: fixed;
+      z-index: 9;
+      bottom: 20px;
+      left: 20px;
+    }
+  }
+  &.submit-btn {
+    font-size: 20px;
+    padding: 8px 40px;
+  }
+}

@@ -1,0 +1,16 @@
+.view-body {
+  background: linear-gradient(
+      0deg,
+      rgba(2, 173, 231, 0.5),
+      rgba(2, 173, 231, 0.5)
+    ),
+    url("../assets/viewBg.jpg") no-repeat;
+  background-size: cover;
+  position: relative;
+  padding-top: 40px;
+  height: 100%;
+  min-height: 100vh;
+  color: black;
+  flex-wrap: wrap;
+  padding: 40px 10px;
+}

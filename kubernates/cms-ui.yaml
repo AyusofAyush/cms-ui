@@ -1,0 +1,52 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: cms-ui
+data:
+  API_HOST: "http://localhost:8000"
+  NODE_ENV: "docker"
+
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: cms-ui
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: cms-ui
+  template:
+    metadata:
+      labels:
+        app: cms-ui
+    spec:
+      containers:
+      - name: cms-ui
+        image: cms-ui:latest
+        imagePullPolicy: Never
+        resources:
+          limits:
+            cpu: 0.6
+            memory: 500Mi
+          requests:
+            cpu: 0.5
+            memory: 500Mi
+        envFrom:
+        - configMapRef:
+            name: cms-ui
+        ports:
+        - containerPort: 3000
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: cms-ui
+spec:
+  type: ClusterIP
+  ports:
+  - port: 3000
+    targetPort: 3000
+  selector:
+    app: cms-ui
